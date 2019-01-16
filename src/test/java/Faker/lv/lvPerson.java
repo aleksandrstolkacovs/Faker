@@ -8,11 +8,6 @@ public class lvPerson extends Faker.Person {
     public static final String FEMALE_NAMES = "src/test/resources/lv/lvFemaleNames.json";
     public static final String LAST_NAMES = "src/test/resources/lv/lvLastNames.json";
 
-    /**
-     * @param |string|null $gender 'male', 'female' or null for any
-     * @return string
-     * @example 'John'
-     */
     public static String firstName() {
 
         String gender = randomElement(titleFormat);
@@ -26,21 +21,10 @@ public class lvPerson extends Faker.Person {
         return firstName;
     }
 
-    /**
-     * @return string
-     * @example 'Doe'
-     */
     public static String lastName() {
         return lastName(LAST_NAMES);
     }
 
-    /**
-     * National Personal Identity number (personas kods)
-     *
-     * @param \DateTime $birthdate
-     * @return string on format XXXXXX-XXXXX
-     * @link https://en.wikipedia.org/wiki/National_identification_number#Latvia
-     */
     public static String personalIdentityNumber(long localDate) {
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("ddMMyy");
@@ -63,9 +47,6 @@ public class lvPerson extends Faker.Person {
         return dateFormat.format(localDate) + " " + partTwo + sum;
     }
 
-    /**
-     * @example '555-123-546'
-     */
     public static String phone() {
         String number = "2" + randomNumber(8, true);
         return number;

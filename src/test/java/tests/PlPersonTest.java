@@ -1,4 +1,4 @@
-package tests.pl;
+package tests;
 
 import Faker.Base;
 import Faker.Payment;
@@ -12,7 +12,7 @@ import static Faker.pl.plPerson.*;
 public class PlPersonTest {
     private static Faker faker = new Faker();
 
-    public static void main(String[] args) throws InvalidArgumentException {
+    public static void main(String[] args) {
 
         BaseInternet baseInternet = new BaseInternet(faker);
         Payment payment = new Payment(faker);

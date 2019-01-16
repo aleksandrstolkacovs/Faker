@@ -15,28 +15,16 @@ public class Person extends Base {
             GENDER_FEMALE
     };
 
-    /**
-     * @return string
-     * @example 'John'
-     */
     public static String firstName(String Path) {
             jsonFileOpen(Path);
             return jsonFileOpen(Path);
     }
 
-    /**
-     * @return string
-     * @example 'Doe'
-     */
     public static String lastName(String Path) {
         jsonFileOpen(Path);
         return jsonFileOpen(Path);
     }
 
-    /**
-     * @return one element string from json array randomly
-     * @example 'Doe'
-     */
     public static String jsonFileOpen(String PathToJson){
         List list = null;
         try {

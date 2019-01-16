@@ -11,11 +11,6 @@ public class sePerson extends Faker.Person {
     private static final String[] genderMale = {"1", "3", "5", "7", "9"};
     private static final String[] genderFemale = {"0", "2", "4", "6", "8"};
 
-    /**
-     * @param |string|null $gender 'male', 'female' or null for any
-     * @return string
-     * @example 'John'
-     */
     public static String firstName() {
 
         String gender = randomElement(titleFormat);
@@ -29,22 +24,10 @@ public class sePerson extends Faker.Person {
         return firstName;
     }
 
-    /**
-     * @return string
-     * @example 'Doe'
-     */
     public static String lastName() {
         return lastName(LAST_NAMES);
     }
 
-    /**
-     * National Personal Identity number (personnummer)
-     *
-     * @param \DateTime $birthdate
-     * @param |string   $gender Person::GENDER_MALE || Person::GENDER_FEMALE
-     * @return string on format XXXXXX-XXXX
-     * @link http://en.wikipedia.org/wiki/Personal_identity_number_(Sweden)
-     */
     public static String personalIdentityNumber(long localDate, String sex) {
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyMMdd");
@@ -64,10 +47,6 @@ public class sePerson extends Faker.Person {
         return datePart + "-" + randomDigits + checksum;
     }
 
-    /**
-     * @param |partialNumber
-     * @return string
-     */
     public static int computeCheckDigit(String partialNumber) {
         int checkDigit = checksum(partialNumber + "0");
         if (checkDigit == 0) {
@@ -77,14 +56,6 @@ public class sePerson extends Faker.Person {
         return (10 - checkDigit);
     }
 
-    /**
-     * @param |string $number
-     *                Utility class for generating and validating Luhn numbers.
-     *                Luhn algorithm is used to validate credit card numbers, IMEI numbers, and
-     *                National Provider Identifier numbers.
-     * @return int
-     * @see |http://en.wikipedia.org/wiki/Luhn_algorithm
-     */
     public static int checksum(String ccNumber) {
         int sum = 0;
         boolean alternate = false;

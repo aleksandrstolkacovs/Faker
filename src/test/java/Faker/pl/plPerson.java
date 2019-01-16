@@ -8,11 +8,6 @@ public class plPerson extends Faker.Person {
     public static final String LAST_NAME_MALE = "src/test/resources/pl/plLastNameMale.json";
     public static final String LAST_NAME_FEMALE = "src/test/resources/pl/plLastNameFemale.json";
 
-    /**
-     * @param |string|null $gender 'male', 'female' or null for any
-     * @return string
-     * @example 'John'
-     */
     public static String firstName() {
 
         String gender = randomElement(titleFormat);
@@ -28,10 +23,6 @@ public class plPerson extends Faker.Person {
         return firstName;
     }
 
-    /**
-     * @return string
-     * @example 'Doe'
-     */
     public static String lastName() {
 
         String gender = randomElement(titleFormat);
@@ -47,15 +38,6 @@ public class plPerson extends Faker.Person {
         return firstName;
     }
 
-
-    /**
-     * PESEL - Universal Electronic System for Registration of the Population
-     *
-     * @param |DateTime $birthdate
-     * @param |string   $sex       M for male or F for female
-     * @return string   11 digit number, like 44051401358
-     * @link http://en.wikipedia.org/wiki/PESEL
-     */
     public static String pesel(long localDate, String sex) {
 
         int[] weights = {1, 3, 7, 9, 1, 3, 7, 9, 1, 3};
@@ -103,12 +85,6 @@ public class plPerson extends Faker.Person {
         return datePart + partTwo + gender + checksum;
     }
 
-    /**
-     * National Identity Card number
-     *
-     * @return string 3 letters and 6 digits, like ABA300000
-     * @link http://en.wikipedia.org/wiki/Polish_National_Identity_Card
-     */
     public static String personalIdentityNumber() {
         // IF ID Card contains “O”, “Q”, “AA”, “AB”, “AC”, “AD”
         char[] range = {'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'P', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
@@ -130,19 +106,10 @@ public class plPerson extends Faker.Person {
         return first.toString() + checksum + last;
     }
 
-    /**
-     * Convert the characters to ASCII value
-     *
-     * @param character character
-     * @return ASCII value
-     */
     public static int CharToASCII(final char character) {
         return (int) character;
     }
 
-    /**
-     * @example '555-123-546'
-     */
     public static String phone() {
         String number = "79" + randomNumber(9, true);
         return number;

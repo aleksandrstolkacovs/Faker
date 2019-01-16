@@ -1,22 +1,25 @@
-package tests.lv;
+package tests;
 
 import Faker.Base;
 import Faker.DateTime;
 import Faker.BaseInternet;
-import Faker.lv.lvPerson;
+import Faker.se.sePerson;
 import com.github.javafaker.Faker;
-import static Faker.lv.lvPerson.personalIdentityNumber;
-import static Faker.lv.lvPerson.phone;
 
-public class LvPersonTest {
+import static Faker.Base.randomElement;
+import static Faker.se.sePerson.personalIdentityNumber;
+import static Faker.se.sePerson.phone;
+
+public class SePersonTest {
     private static Faker faker = new Faker();
 
     public static void main(String[] args){
 
         BaseInternet baseInternet = new BaseInternet(faker);
         DateTime dateAndTime = new DateTime(faker);
+        String[] gender = {"M","W"};
 
-        System.out.print("LV ID NUMBER" + Base.wordDistance("LV ID NUMBER", 15));
+        System.out.print("LV ID NUMBER" + Base.wordDistance("SE ID NUMBER", 15));
             System.out.print("EMAIL" + Base.wordDistance("EMAIL", 40));
             System.out.print("PHONE NUMBER" + Base.wordDistance("PHONE NUMBER", 15));
             System.out.print("NAME" + Base.wordDistance("NAME", 15));
@@ -25,11 +28,12 @@ public class LvPersonTest {
 
         for (int i = 0; i < 10; i++) {
 
-            String name = lvPerson.firstName();
-            String surname = lvPerson.lastName();
+            String name = sePerson.firstName();
+            String surname = sePerson.lastName();
             long birthDate = dateAndTime.birthday().getTime();
+            String gen = randomElement(gender);
 
-            String idNumber = personalIdentityNumber(birthDate);
+            String idNumber = personalIdentityNumber(birthDate, gen);
             String email = baseInternet.email(name,surname);
             String phone = phone();
 

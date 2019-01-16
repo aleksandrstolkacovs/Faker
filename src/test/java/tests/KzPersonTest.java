@@ -1,4 +1,4 @@
-package tests.kz;
+package tests;
 
 import Faker.Base;
 import Faker.DateTime;

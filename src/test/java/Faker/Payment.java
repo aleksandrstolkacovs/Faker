@@ -13,22 +13,10 @@ public class Payment extends Finance {
 
     Faker faker = new Faker();
 
-    /**
-     * International Bank Account Number (IBAN)
-     *
-     * @param |string  $countryCode ISO 3166-1 alpha-2 country code
-     * @param |string  $prefix      for generating bank account number of a specific bank
-     * @param |integer $length      total length without country code and 2 check digits
-     * @return string
-     * @link http://en.wikipedia.org/wiki/International_Bank_Account_Number
-     */
     public String ibanNumber(String countryCode) {
         return faker.finance().iban(countryCode);
     }
 
-    /**
-     * @var array list of Polish banks, source: http://www.nbp.pl/banki_w_polsce/ewidencja/ewidencja.html
-     */
     protected String banks[] = {
             "Aareal Bank Aktiengesellschaft",
             "Alior Bank SA",
@@ -104,9 +92,6 @@ public class Payment extends Finance {
             "VOLKSWAGEN BANK POLSKA SA",
     };
 
-    /**
-     * @example 'Euro Bank SA'
-     */
     public String PLbank() {
         return randomElement(this.banks);
     }
