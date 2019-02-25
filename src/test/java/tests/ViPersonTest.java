@@ -1,7 +1,6 @@
 package tests;
 import Faker.Base;
 import Faker.DateTime;
-import Faker.Payment;
 import Faker.BaseInternet;
 import Faker.vi.viPerson;
 import com.github.javafaker.Faker;
@@ -18,9 +17,7 @@ public class ViPersonTest {
         BaseInternet baseInternet = new BaseInternet(faker);
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
         DateTime dateAndTime = new DateTime(faker);
-        Payment payment = new Payment(faker);
         String[] gender = {"M", "W"};
-        SimpleDateFormat yearFormat = new SimpleDateFormat("yyyy");
 
         System.out.print("NAME" + Base.wordDistance("NAME", 15));
         System.out.print("MIDDLE NAME" + Base.wordDistance("NAME", 15));
