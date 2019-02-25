@@ -1,9 +1,5 @@
 package Faker.vi;
 
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-
 public class viPerson extends Faker.Person {
 
     public static final String MALE_NAMES = "src/test/resources/vi/viMaleNames.json";

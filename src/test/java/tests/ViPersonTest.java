@@ -51,7 +51,6 @@ public class ViPersonTest {
             System.out.print(gen + Base.wordDistance(gen, 10));
             System.out.print(id + Base.wordDistance(id, 20));
             System.out.println(email);
-
         }
     }
 }

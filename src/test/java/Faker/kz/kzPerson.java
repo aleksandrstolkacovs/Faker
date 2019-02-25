@@ -112,4 +112,24 @@ public class kzPerson extends Faker.Person {
         String number = "7701" + randomNumber(6, true);
         return number;
     }
+
+    public static String randomPassportNumberKz() {
+        String n = "N";
+        String passportNumber = n + String.valueOf(randomNumber(8, true));
+        return passportNumber;
+    }
+
+    public static String randomIdNumberKz() {
+        return String.valueOf(randomNumber(9, true));
+    }
+
+    public static String randomPermitNumber() {
+        return String.valueOf(randomNumber(9, true));
+    }
+
+    public static String createDocumentTypeAndNumber() {
+        String docTypeAndNumber = null;
+
+        return docTypeAndNumber;
+    }
 }
