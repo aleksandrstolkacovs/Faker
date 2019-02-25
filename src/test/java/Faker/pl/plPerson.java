@@ -1,6 +1,7 @@
 package Faker.pl;
 
 import java.text.SimpleDateFormat;
+
 public class plPerson extends Faker.Person {
 
     public static final String MALE_NAMES = "src/test/resources/pl/plMaleNames.json";
@@ -45,7 +46,7 @@ public class plPerson extends Faker.Person {
         int gender = 0;
         String month;
 
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyMMdd");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy");
         SimpleDateFormat yearFormat = new SimpleDateFormat("yy");
         SimpleDateFormat monthFormat = new SimpleDateFormat("MM");
         SimpleDateFormat dayFormat = new SimpleDateFormat("dd");

@@ -25,6 +25,11 @@ public class Person extends Base {
         return jsonFileOpen(Path);
     }
 
+    public static String middleName(String Path) {
+        jsonFileOpen(Path);
+        return jsonFileOpen(Path);
+    }
+
     public static String jsonFileOpen(String PathToJson){
         List list = null;
         try {

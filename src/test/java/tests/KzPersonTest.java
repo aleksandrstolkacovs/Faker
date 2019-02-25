@@ -6,7 +6,9 @@ import Faker.Payment;
 import Faker.BaseInternet;
 import Faker.kz.kzPerson;
 import com.github.javafaker.Faker;
+
 import java.text.SimpleDateFormat;
+
 import static Faker.Base.randomElement;
 import static Faker.kz.kzPerson.individualIdentificationNumber;
 import static Faker.kz.kzPerson.phone;
@@ -22,7 +24,7 @@ public class KzPersonTest {
 
         SimpleDateFormat dateFormat;
         dateFormat = new SimpleDateFormat("dd.MM.yy");
-        String[] gender = {"M","W"};
+        String[] gender = {"M", "W"};
 
         System.out.print("PHONE NUMBER" + Base.wordDistance("PHONE NUMBER", 15));
         System.out.print("KZ IIN" + Base.wordDistance("KZ IIN", 15));
@@ -41,10 +43,10 @@ public class KzPersonTest {
 
             String gen = randomElement(gender);
             String idNumber = individualIdentificationNumber(birthDate, gen);
-            String email = baseInternet.email(name,surname);
+            String email = baseInternet.email(name, surname);
             String phone = phone();
             String iban = payment.ibanNumber("KZ");
-            String birthday =  dateFormat.format( birthDate );
+            String birthday = dateFormat.format(birthDate);
 
             System.out.print(phone + Base.wordDistance(phone, 15));
             System.out.print(idNumber + Base.wordDistance(idNumber, 15));
