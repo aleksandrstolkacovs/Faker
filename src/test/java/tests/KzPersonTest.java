@@ -26,13 +26,16 @@ public class KzPersonTest {
         dateFormat = new SimpleDateFormat("dd.MM.yy");
         String[] gender = {"M", "W"};
 
-        System.out.print("PHONE NUMBER" + Base.wordDistance("PHONE NUMBER", 15));
         System.out.print("KZ IIN" + Base.wordDistance("KZ IIN", 15));
-        System.out.print("EMAIL" + Base.wordDistance("EMAIL", 40));
-        System.out.print("NAME" + Base.wordDistance("NAME", 15));
-        System.out.print("SURNAME" + Base.wordDistance("SURNAME", 15));
-        System.out.print("BIRTH DATE" + Base.wordDistance("BIRTH DATE", 15));
-        System.out.print("GENDER" + Base.wordDistance("GENDER", 10));
+        System.out.print("PHONE NUMBER" + Base.wordDistance("PHONE NUMBER", 12));
+        System.out.print("EMAIL" + Base.wordDistance("EMAIL", 30));
+        System.out.print("NAME" + Base.wordDistance("NAME", 13));
+        System.out.print("SURNAME" + Base.wordDistance("SURNAME", 13));
+        System.out.print("BIRTH DATE" + Base.wordDistance("BIRTH DATE", 10));
+        System.out.print("GEN" + Base.wordDistance("GENDER", 7));
+        System.out.print("PASSPORT" + Base.wordDistance("PASSPORT", 10));
+        System.out.print("ID NUMBER" + Base.wordDistance("ID NUMBER", 10));
+        System.out.print("PERMIT NUMBER" + Base.wordDistance("PERMIT NUMBER", 14));
         System.out.println("IBAN" + Base.wordDistance("IBAN", 30));
 
         for (int i = 0; i < 10; i++) {
@@ -43,18 +46,25 @@ public class KzPersonTest {
 
             String gen = randomElement(gender);
             String idNumber = individualIdentificationNumber(birthDate, gen);
-            String email = baseInternet.email(name, surname);
+//            String email = baseInternet.email(name, surname);
+            String email = baseInternet.emailLatinLetters();
             String phone = phone();
             String iban = payment.ibanNumber("KZ");
             String birthday = dateFormat.format(birthDate);
+            String fakePassportNumber = kzPerson.randomPassportNumberKz();
+            String fakeIdNumber = kzPerson.randomIdNumberKz();
+            String fakePermitNumber = kzPerson.randomPermitNumber();
 
-            System.out.print(phone + Base.wordDistance(phone, 15));
             System.out.print(idNumber + Base.wordDistance(idNumber, 15));
-            System.out.print(email + Base.wordDistance(email, 40));
-            System.out.print(name + Base.wordDistance(name, 15));
-            System.out.print(surname + Base.wordDistance(surname, 15));
-            System.out.print(birthday + Base.wordDistance(birthday, 15));
-            System.out.print(gen + Base.wordDistance(gen, 10));
+            System.out.print(phone + Base.wordDistance(phone, 12));
+            System.out.print(email + Base.wordDistance(email, 30));
+            System.out.print(name + Base.wordDistance(name, 13));
+            System.out.print(surname + Base.wordDistance(surname, 13));
+            System.out.print(birthday + Base.wordDistance(birthday, 10));
+            System.out.print(gen + Base.wordDistance(gen, 4));
+            System.out.print(fakePassportNumber + Base.wordDistance(fakePassportNumber, 10));
+            System.out.print(fakeIdNumber + Base.wordDistance(fakeIdNumber, 10));
+            System.out.print(fakePermitNumber + Base.wordDistance(fakePermitNumber, 14));
             System.out.println(iban + Base.wordDistance(iban, 30));
         }
     }

@@ -21,7 +21,7 @@ public class ViPersonTest {
 
         System.out.print("NAME" + Base.wordDistance("NAME", 15));
         System.out.print("MIDDLE NAME" + Base.wordDistance("NAME", 15));
-        System.out.print("SURNAME" + Base.wordDistance("SURNAME", 12));
+        System.out.print("SURNAME" + Base.wordDistance("SURNAME", 20));
         System.out.print("PHONE NUMBER" + Base.wordDistance("PHONE NUMBER", 15));
         System.out.print("IBAN" + Base.wordDistance("IBAN", 20));
         System.out.print("BIRTH DATE" + Base.wordDistance("BIRTH DATE", 15));
@@ -44,7 +44,7 @@ public class ViPersonTest {
 
             System.out.print(name + Base.wordDistance(name,15));
             System.out.print(middleName + Base.wordDistance(middleName, 22));
-            System.out.print(lastName + Base.wordDistance(lastName, 12));
+            System.out.print(lastName + Base.wordDistance(lastName, 20));
             System.out.print(phone + Base.wordDistance(phone, 15));
             System.out.print(iban + Base.wordDistance(iban, 20));
             System.out.print(birthday + Base.wordDistance(birthday, 15));

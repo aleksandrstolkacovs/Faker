@@ -27,11 +27,11 @@ public class PlPersonTest {
         System.out.print("SURNAME" + Base.wordDistance("SURNAME", 15));
         System.out.print("PL ID NUMBER" + Base.wordDistance("PL ID NUMBER", 15));
         System.out.print("DOC NUMBER" + Base.wordDistance("DOC NUMBER", 12));
-        System.out.print("EMAIL" + Base.wordDistance("EMAIL", 40));
+        System.out.print("EMAIL" + Base.wordDistance("EMAIL", 35));
         System.out.print("POSTCODE" + Base.wordDistance("POSTCODE", 10));
         System.out.print("PHONE NUMBER" + Base.wordDistance("PHONE NUMBER", 15));
-        System.out.print("IBAN" + Base.wordDistance("IBAN", 35));
-        System.out.print("BANK" + Base.wordDistance("BANK", 50));
+        System.out.print("IBAN" + Base.wordDistance("IBAN", 30));
+//        System.out.print("BANK" + Base.wordDistance("BANK", 50));
         System.out.print("BIRTH DATE" + Base.wordDistance("BIRTH DATE", 20));
         System.out.println();
 
@@ -52,11 +52,11 @@ public class PlPersonTest {
             System.out.print(surname + Base.wordDistance(surname, 15));
             System.out.print(idNumber + Base.wordDistance(idNumber, 15));
             System.out.print(document + Base.wordDistance(document, 12));
-            System.out.print(email + Base.wordDistance(email, 40));
+            System.out.print(email + Base.wordDistance(email, 35));
             System.out.print("00001" + Base.wordDistance("00001", 10));
             System.out.print(phone + Base.wordDistance(phone, 15));
-            System.out.print(iban + Base.wordDistance(iban, 35));
-            System.out.print(bank + Base.wordDistance(bank, 50));
+            System.out.print(iban + Base.wordDistance(iban, 30));
+//            System.out.print(bank + Base.wordDistance(bank, 50));
             System.out.println(dateFormat.format(birthDate) + Base.wordDistance(dateFormat.format(birthDate), 20));
         }
     }
