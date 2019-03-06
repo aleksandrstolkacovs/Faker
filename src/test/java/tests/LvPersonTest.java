@@ -3,10 +3,10 @@ package tests;
 import Faker.Base;
 import Faker.DateTime;
 import Faker.BaseInternet;
-import Faker.lv.lvPerson;
+import Faker.lv.LvPerson;
 import com.github.javafaker.Faker;
-import static Faker.lv.lvPerson.personalIdentityNumber;
-import static Faker.lv.lvPerson.phone;
+import static Faker.lv.LvPerson.personalIdentityNumber;
+import static Faker.lv.LvPerson.phone;
 
 public class LvPersonTest {
     private static Faker faker = new Faker();
@@ -25,8 +25,8 @@ public class LvPersonTest {
 
         for (int i = 0; i < 10; i++) {
 
-            String name = lvPerson.firstName();
-            String surname = lvPerson.lastName();
+            String name = LvPerson.firstName();
+            String surname = LvPerson.lastName();
             long birthDate = dateAndTime.birthday().getTime();
 
             String idNumber = personalIdentityNumber(birthDate);

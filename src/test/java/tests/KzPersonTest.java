@@ -4,14 +4,14 @@ import Faker.Base;
 import Faker.DateTime;
 import Faker.Payment;
 import Faker.BaseInternet;
-import Faker.kz.kzPerson;
+import Faker.kz.KzPerson;
 import com.github.javafaker.Faker;
 
 import java.text.SimpleDateFormat;
 
 import static Faker.Base.randomElement;
-import static Faker.kz.kzPerson.individualIdentificationNumber;
-import static Faker.kz.kzPerson.phone;
+import static Faker.kz.KzPerson.individualIdentificationNumber;
+import static Faker.kz.KzPerson.phone;
 
 public class KzPersonTest {
     private static Faker faker = new Faker();
@@ -40,8 +40,8 @@ public class KzPersonTest {
 
         for (int i = 0; i < 10; i++) {
 
-            String name = kzPerson.firstName();
-            String surname = kzPerson.lastName();
+            String name = KzPerson.firstName();
+            String surname = KzPerson.lastName();
             long birthDate = dateAndTime.birthday().getTime();
 
             String gen = randomElement(gender);
@@ -51,9 +51,9 @@ public class KzPersonTest {
             String phone = phone();
             String iban = payment.ibanNumber("KZ");
             String birthday = dateFormat.format(birthDate);
-            String fakePassportNumber = kzPerson.randomPassportNumberKz();
-            String fakeIdNumber = kzPerson.randomIdNumberKz();
-            String fakePermitNumber = kzPerson.randomPermitNumber();
+            String fakePassportNumber = KzPerson.randomPassportNumberKz();
+            String fakeIdNumber = KzPerson.randomIdNumberKz();
+            String fakePermitNumber = KzPerson.randomPermitNumber();
 
             System.out.print(idNumber + Base.wordDistance(idNumber, 15));
             System.out.print(phone + Base.wordDistance(phone, 12));

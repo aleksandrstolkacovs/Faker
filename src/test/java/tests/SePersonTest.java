@@ -4,14 +4,14 @@ import Faker.Base;
 import Faker.DateTime;
 import Faker.Payment;
 import Faker.BaseInternet;
-import Faker.se.sePerson;
+import Faker.se.SePerson;
 import com.github.javafaker.Faker;
 
 import java.io.IOException;
 
 import static Faker.Base.randomElement;
-import static Faker.se.sePerson.personalIdentityNumber;
-import static Faker.se.sePerson.phone;
+import static Faker.se.SePerson.personalIdentityNumber;
+import static Faker.se.SePerson.phone;
 
 public class SePersonTest {
     private static Faker faker = new Faker();
@@ -34,8 +34,8 @@ public class SePersonTest {
 
         for (int i = 0; i < 10; i++) {
 
-            String name = sePerson.firstName();
-            String surname = sePerson.lastName();
+            String name = SePerson.firstName();
+            String surname = SePerson.lastName();
             long birthDate = dateAndTime.birthday().getTime();
             String gen = randomElement(gender);
 
@@ -43,8 +43,8 @@ public class SePersonTest {
             String email = baseInternet.email(name, surname);
             String phone = phone();
             String iban = payment.ibanNumber("SE");
-            String clearingNumber = String.valueOf(sePerson.clearingNumber());
-            String bankAcountNumber = String.valueOf(sePerson.bankAccountNumber());
+            String clearingNumber = String.valueOf(SePerson.clearingNumber());
+            String bankAcountNumber = String.valueOf(SePerson.bankAccountNumber());
 
 
             System.out.print(idNumber + Base.wordDistance(idNumber, 15));

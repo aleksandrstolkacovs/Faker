@@ -4,13 +4,13 @@ import Faker.Base;
 import Faker.Payment;
 import Faker.DateTime;
 import Faker.BaseInternet;
-import Faker.pl.plPerson;
+import Faker.pl.PlPerson;
 import com.github.javafaker.Faker;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
-import static Faker.pl.plPerson.*;
+import static Faker.pl.PlPerson.*;
 
 public class PlPersonTest {
     private static Faker faker = new Faker();
@@ -37,12 +37,12 @@ public class PlPersonTest {
 
         for (int i = 0; i < 10; i++) {
 
-            String name = plPerson.firstName();
-            String surname = plPerson.lastName();
+            String name = PlPerson.firstName();
+            String surname = PlPerson.lastName();
             long birthDate = dateAndTime.birthday(20, 75).getTime();
             String gen = randomElement(gender);
             String idNumber = pesel(birthDate, gen);
-            String email = baseInternet.email(plPerson.firstName(),plPerson.lastName());
+            String email = baseInternet.email(PlPerson.firstName(), PlPerson.lastName());
             String phone = phone();
             String document = personalIdentityNumber();
             String iban = payment.ibanNumber("PL");

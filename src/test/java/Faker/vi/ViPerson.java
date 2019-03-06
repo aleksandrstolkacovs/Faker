@@ -2,7 +2,7 @@ package Faker.vi;
 
 import java.util.Random;
 
-public class viPerson extends Faker.Person {
+public class ViPerson extends Faker.Person {
 
     public static final String MALE_NAMES = "src/test/resources/vi/viMaleNames.json";
     public static final String FEMALE_NAMES = "src/test/resources/vi/viFemaleNames.json";

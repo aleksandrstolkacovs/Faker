@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public class kzPerson extends Faker.Person {
+public class KzPerson extends Faker.Person {
 
     public static final String MALE_NAMES = "src/test/resources/kz/kzMaleNames.json";
     public static final String FEMALE_NAMES = "src/test/resources/kz/kzFemaleNames.json";

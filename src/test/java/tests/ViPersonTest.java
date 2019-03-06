@@ -2,7 +2,7 @@ package tests;
 import Faker.Base;
 import Faker.DateTime;
 import Faker.BaseInternet;
-import Faker.vi.viPerson;
+import Faker.vi.ViPerson;
 import com.github.javafaker.Faker;
 
 import java.text.SimpleDateFormat;
@@ -30,17 +30,17 @@ public class ViPersonTest {
         System.out.println("EMAIL" + Base.wordDistance("EMAIL", 40));
 
         for (int i = 0; i < 10; i++) {
-            String name = viPerson.firstName();
-            String middleName = viPerson.middleName();
-            String lastName = viPerson.lastName();
-            String phone = viPerson.phone();
+            String name = ViPerson.firstName();
+            String middleName = ViPerson.middleName();
+            String lastName = ViPerson.lastName();
+            String phone = ViPerson.phone();
             String email = baseInternet.email(name, lastName);
             String gen = randomElement(gender);
             long birthDate = dateAndTime.birthday().getTime();
-            String iban = viPerson.randomIbanVietnam();
+            String iban = ViPerson.randomIbanVietnam();
             String birthday = dateFormat.format(birthDate);
             Integer year = Integer.valueOf(birthday.substring(6));
-            String id = viPerson.getId(gen, year);
+            String id = ViPerson.getId(gen, year);
 
             System.out.print(name + Base.wordDistance(name,15));
             System.out.print(middleName + Base.wordDistance(middleName, 22));

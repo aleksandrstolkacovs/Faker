@@ -2,7 +2,7 @@ package Faker.pl;
 
 import java.text.SimpleDateFormat;
 
-public class plPerson extends Faker.Person {
+public class PlPerson extends Faker.Person {
 
     public static final String MALE_NAMES = "src/test/resources/pl/plMaleNames.json";
     public static final String FEMALE_NAMES = "src/test/resources/pl/plFemaleNames.json";

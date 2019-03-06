@@ -9,12 +9,12 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.stream.Collectors;
 
-public class sePerson extends Faker.Person {
+public class SePerson extends Faker.Person {
     ClassLoader classLoader = getClass().getClassLoader();
     private static File jsonFile;
     private static int i;
 
-    public sePerson() {
+    public SePerson() {
         jsonFile = new File(classLoader.getResource("se/seClearingNumber.json").getFile());
     }
 
