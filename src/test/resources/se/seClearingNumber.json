@@ -1,0 +1,209 @@
+{
+  "rangeList": [
+    {
+      "min": 9550,
+      "max": 9569,
+      "numbersToGenerate": 7
+    },
+    {
+      "min": 9040,
+      "max": 9049,
+      "numbersToGenerate": 7
+    },
+    {
+      "min": 1200,
+      "max": 1399,
+      "numbersToGenerate": 7
+    },
+    {
+      "min": 2400,
+      "max": 2499,
+      "numbersToGenerate": 7
+    },
+    {
+      "min": 9190,
+      "max": 9189,
+      "numbersToGenerate": 7
+    },
+    {
+      "min": 1305,
+      "max": 1305,
+      "numbersToGenerate": 7
+    },
+    {
+      "min": 9190,
+      "max": 9199,
+      "numbersToGenerate": 7
+    },
+    {
+      "min": 9590,
+      "max": 9599,
+      "numbersToGenerate": 7
+    },
+    {
+      "min": 9400,
+      "max": 9499,
+      "numbersToGenerate": 7
+    },
+    {
+      "min": 9460,
+      "max": 9469,
+      "numbersToGenerate": 7
+    },
+    {
+      "min": 6000,
+      "max": 6999,
+      "numbersToGenerate": 9
+    },
+    {
+      "min": 9270,
+      "max": 9279,
+      "numbersToGenerate": 7
+    },
+    {
+      "min": 9170,
+      "max": 9179,
+      "numbersToGenerate": 7
+    },
+    {
+      "min": 9020,
+      "max": 9029,
+      "numbersToGenerate": 7
+    },
+    {
+      "min": 3400,
+      "max": 3409,
+      "numbersToGenerate": 7
+    },
+    {
+      "min": 9060,
+      "max": 9069,
+      "numbersToGenerate": 7
+    },
+    {
+      "min": 1100,
+      "max": 1199,
+      "numbersToGenerate": 7
+    },
+    {
+      "min": 1449,
+      "max": 1999,
+      "numbersToGenerate": 7
+    },
+    {
+      "min": 3000,
+      "max": 3399,
+      "numbersToGenerate": 7
+    },
+    {
+      "min": 3410,
+      "max": 3999,
+      "numbersToGenerate": 7
+    },
+    {
+      "min": 4000,
+      "max": 4999,
+      "numbersToGenerate": 7
+    },
+    {
+      "min": 1401,
+      "max": 1448,
+      "numbersToGenerate": 7
+    },
+    {
+      "min": 2000,
+      "max": 2099,
+      "numbersToGenerate": 7
+    },
+    {
+      "min": 9500,
+      "max": 9549,
+      "numbersToGenerate": 10
+    },
+    {
+      "min": 9960,
+      "max": 9969,
+      "numbersToGenerate": 10
+    },
+    {
+      "min": 3300,
+      "max": 3782,
+      "numbersToGenerate": 10
+    },
+    {
+      "min": 9100,
+      "max": 9109,
+      "numbersToGenerate": 7
+    },
+    {
+      "min": 9280,
+      "max": 9289,
+      "numbersToGenerate": 7
+    },
+    {
+      "min": 9090,
+      "max": 9099,
+      "numbersToGenerate": 7
+    },
+    {
+      "min": 9230,
+      "max": 9239,
+      "numbersToGenerate": 7
+    },
+    {
+      "min": 9250,
+      "max": 9259,
+      "numbersToGenerate": 7
+    },
+    {
+      "min": 5000,
+      "max": 5999,
+      "numbersToGenerate": 7
+    },
+    {
+      "min": 9120,
+      "max": 9124,
+      "numbersToGenerate": 7
+    },
+    {
+      "min": 9130,
+      "max": 9149,
+      "numbersToGenerate": 7
+    },
+    {
+      "min": 9150,
+      "max": 9169,
+      "numbersToGenerate": 7
+    },
+    {
+      "min": 9300,
+      "max": 9329,
+      "numbersToGenerate": 10
+    },
+    {
+      "min": 9330,
+      "max": 9349,
+      "numbersToGenerate": 10
+    },
+    {
+      "min": 9570,
+      "max": 9579,
+      "numbersToGenerate": 10
+    },
+    {
+      "min": 7000,
+      "max": 7999,
+      "numbersToGenerate": 7
+    },
+    {
+      "min": 8000,
+      "max": 8999,
+      "numbersToGenerate": 10
+    },
+    {
+      "min": 2300,
+      "max": 2399,
+      "numbersToGenerate": 7
+    }
+  ]
+}

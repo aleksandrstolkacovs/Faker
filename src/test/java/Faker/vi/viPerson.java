@@ -72,7 +72,6 @@ public class viPerson extends Faker.Person {
                 id = String.valueOf(randomNumber(9, true));
             } else if (birthDate >= 2000) {
                 id = randomNumber(3, true) + "3" + randomNumber(8, true);
-                ;
             } else {
                 id = randomNumber(3, true) + "1" + randomNumber(8, true);
             }

@@ -1,12 +1,28 @@
 package Faker.se;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.stream.Collectors;
 
 public class sePerson extends Faker.Person {
+    ClassLoader classLoader = getClass().getClassLoader();
+    private static File jsonFile;
+    private static int i;
+
+    public sePerson() {
+        jsonFile = new File(classLoader.getResource("se/seClearingNumber.json").getFile());
+    }
 
     public static final String MALE_NAMES = "src/test/resources/se/seMaleNames.json";
     public static final String FEMALE_NAMES = "src/test/resources/se/seFemaleNames.json";
     public static final String LAST_NAMES = "src/test/resources/se/seLastNames.json";
+    public static final String JSON = "src/test/resources/se/seClearingNumber.json";
+
 
     private static final String[] genderMale = {"1", "3", "5", "7", "9"};
     private static final String[] genderFemale = {"0", "2", "4", "6", "8"};
@@ -76,5 +92,26 @@ public class sePerson extends Faker.Person {
     public static String phone() {
         String number = "2" + randomNumber(8, true);
         return number;
+    }
+
+    public static RangeList getClearingAccountNumber() throws IOException {
+        File resource = new File(JSON);
+        BufferedReader reader = new BufferedReader(new FileReader(resource));
+        String jsonToParse = reader.lines().collect(Collectors.joining());
+        ObjectMapper mapper = new ObjectMapper();
+        RangeList ranges = mapper.readValue(jsonToParse, RangeList.class);
+        return ranges;
+    }
+
+    public static Integer clearingNumber() throws IOException {
+        i = numberBetween(1, getClearingAccountNumber().getRangeList().size());
+        int min = getClearingAccountNumber().getRangeList().get(i).getMin();
+        int max = getClearingAccountNumber().getRangeList().get(i).getMax();
+        return numberBetween(min, max);
+    }
+
+    public static Integer bankAccountNumber() throws IOException {
+        int bankAccountNumber = getClearingAccountNumber().getRangeList().get(i).getNumbersToGenerate();
+        return randomNumber(bankAccountNumber, true);
     }
 }
