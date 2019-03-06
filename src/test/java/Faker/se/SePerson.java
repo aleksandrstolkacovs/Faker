@@ -21,7 +21,7 @@ public class SePerson extends Faker.Person {
     public static final String MALE_NAMES = "src/test/resources/se/seMaleNames.json";
     public static final String FEMALE_NAMES = "src/test/resources/se/seFemaleNames.json";
     public static final String LAST_NAMES = "src/test/resources/se/seLastNames.json";
-    public static final String JSON = "src/test/resources/se/seClearingNumber.json";
+    public static final String SE_CLEARING_NUMBERS = "src/test/resources/se/seClearingNumber.json";
 
 
     private static final String[] genderMale = {"1", "3", "5", "7", "9"};
@@ -95,7 +95,7 @@ public class SePerson extends Faker.Person {
     }
 
     public static RangeList getClearingAccountNumber() throws IOException {
-        File resource = new File(JSON);
+        File resource = new File(SE_CLEARING_NUMBERS);
         BufferedReader reader = new BufferedReader(new FileReader(resource));
         String jsonToParse = reader.lines().collect(Collectors.joining());
         ObjectMapper mapper = new ObjectMapper();
