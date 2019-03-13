@@ -33,6 +33,7 @@ public class PlPersonTest {
         System.out.print("IBAN" + Base.wordDistance("IBAN", 30));
 //        System.out.print("BANK" + Base.wordDistance("BANK", 50));
         System.out.print("BANK NAME" + Base.wordDistance("BANK NAME", 10));
+        System.out.print("ADDRESS" + Base.wordDistance("ADDRESS", 20));
         System.out.print("BIRTH DATE" + Base.wordDistance("BIRTH DATE", 20));
         System.out.println();
 
@@ -48,6 +49,7 @@ public class PlPersonTest {
             String document = personalIdentityNumber();
             String iban = payment.ibanNumber("PL");
             String bank = payment.PLbank();
+            String address = PlPerson.address();
             String bankName = String.valueOf(bankName());
 
             System.out.print(name + Base.wordDistance(name, 15));
@@ -60,6 +62,7 @@ public class PlPersonTest {
             System.out.print(iban + Base.wordDistance(iban, 30));
 //            System.out.print(bank + Base.wordDistance(bank, 50));
             System.out.print(bankName + Base.wordDistance(bankName, 10));
+            System.out.print(address + Base.wordDistance(address, 20));
             System.out.println(dateFormat.format(birthDate) + Base.wordDistance(dateFormat.format(birthDate), 20));
         }
     }

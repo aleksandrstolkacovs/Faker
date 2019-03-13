@@ -1,6 +1,7 @@
 package Faker.pl;
 
 import java.text.SimpleDateFormat;
+import java.util.Random;
 
 public class PlPerson extends Faker.Person {
 
@@ -119,5 +120,16 @@ public class PlPerson extends Faker.Person {
     public static int bankName() {
         int bankName = randomNumber(8, true);
         return bankName;
+    }
+
+    public static String address() {
+        String alphabet = "abcdefghijklmnopqrstuvwxyz";
+        Random random = new Random();
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i < 18; i ++) {
+            int randomIndex = random.nextInt(alphabet.length());
+            stringBuilder.append(alphabet.charAt(randomIndex));
+        }
+        return stringBuilder.toString();
     }
 }
