@@ -115,4 +115,9 @@ public class PlPerson extends Faker.Person {
         String number = "79" + randomNumber(9, true);
         return number;
     }
+
+    public static int bankName() {
+        int bankName = randomNumber(8, true);
+        return bankName;
+    }
 }

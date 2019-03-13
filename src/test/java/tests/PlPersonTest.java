@@ -32,21 +32,23 @@ public class PlPersonTest {
         System.out.print("PHONE NUMBER" + Base.wordDistance("PHONE NUMBER", 15));
         System.out.print("IBAN" + Base.wordDistance("IBAN", 30));
 //        System.out.print("BANK" + Base.wordDistance("BANK", 50));
+        System.out.print("BANK NAME" + Base.wordDistance("BANK NAME", 10));
         System.out.print("BIRTH DATE" + Base.wordDistance("BIRTH DATE", 20));
         System.out.println();
 
         for (int i = 0; i < 10; i++) {
-
+            String gen = randomElement(gender);
             String name = PlPerson.firstName();
             String surname = PlPerson.lastName();
-            long birthDate = dateAndTime.birthday(20, 75).getTime();
-            String gen = randomElement(gender);
+//            long birthDate = dateAndTime.birthday(20, 75).getTime();
+            long birthDate = dateAndTime.birthday(37, 37).getTime();
             String idNumber = pesel(birthDate, gen);
             String email = baseInternet.email(PlPerson.firstName(), PlPerson.lastName());
             String phone = phone();
             String document = personalIdentityNumber();
             String iban = payment.ibanNumber("PL");
             String bank = payment.PLbank();
+            String bankName = String.valueOf(bankName());
 
             System.out.print(name + Base.wordDistance(name, 15));
             System.out.print(surname + Base.wordDistance(surname, 15));
@@ -57,6 +59,7 @@ public class PlPersonTest {
             System.out.print(phone + Base.wordDistance(phone, 15));
             System.out.print(iban + Base.wordDistance(iban, 30));
 //            System.out.print(bank + Base.wordDistance(bank, 50));
+            System.out.print(bankName + Base.wordDistance(bankName, 10));
             System.out.println(dateFormat.format(birthDate) + Base.wordDistance(dateFormat.format(birthDate), 20));
         }
     }
