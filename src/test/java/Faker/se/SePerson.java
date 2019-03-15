@@ -90,7 +90,7 @@ public class SePerson extends Faker.Person {
     }
 
     public static String phone() {
-        String number = "2" + randomNumber(8, true);
+        String number = "07" + randomNumber(8, true);
         return number;
     }
 

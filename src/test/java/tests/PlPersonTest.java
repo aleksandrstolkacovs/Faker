@@ -42,7 +42,7 @@ public class PlPersonTest {
             String name = PlPerson.firstName();
             String surname = PlPerson.lastName();
 //            long birthDate = dateAndTime.birthday(20, 75).getTime();
-            long birthDate = dateAndTime.birthday(37, 37).getTime();
+            long birthDate = dateAndTime.birthday(20, 75).getTime();
             String idNumber = pesel(birthDate, gen);
             String email = baseInternet.email(PlPerson.firstName(), PlPerson.lastName());
             String phone = phone();
