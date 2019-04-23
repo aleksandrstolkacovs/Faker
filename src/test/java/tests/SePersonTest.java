@@ -36,7 +36,7 @@ public class SePersonTest {
 
             String name = SePerson.firstName();
             String surname = SePerson.lastName();
-            long birthDate = dateAndTime.birthday().getTime();
+            long birthDate = dateAndTime.birthday(18, 80).getTime();
             String gen = randomElement(gender);
 
             String idNumber = personalIdentityNumber(birthDate, gen);

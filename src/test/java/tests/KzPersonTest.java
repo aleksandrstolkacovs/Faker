@@ -42,7 +42,7 @@ public class KzPersonTest {
 
             String name = KzPerson.firstName();
             String surname = KzPerson.lastName();
-            long birthDate = dateAndTime.birthday().getTime();
+            long birthDate = dateAndTime.birthday(18, 65).getTime();
 
             String gen = randomElement(gender);
             String idNumber = individualIdentificationNumber(birthDate, gen);
